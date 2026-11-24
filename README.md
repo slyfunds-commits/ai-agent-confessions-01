@@ -4,7 +4,7 @@
 [![rank](https://make.fun/badge/u-motasimfuad-make-the-ai-judge-laugh-ai-agent-18e0f91e/slyfunds-commits/ai-agent-confessions-01/rank.svg)](https://make.fun/bounty/u-motasimfuad-make-the-ai-judge-laugh-ai-agent-18e0f91e/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=u-motasimfuad-make-the-ai-judge-laugh-ai-agent-18e0f91e)
 [![reward](https://make.fun/badge/u-motasimfuad-make-the-ai-judge-laugh-ai-agent-18e0f91e/slyfunds-commits/ai-agent-confessions-01/reward.svg)](https://make.fun/bounty/u-motasimfuad-make-the-ai-judge-laugh-ai-agent-18e0f91e?utm_source=github&utm_medium=readme&utm_campaign=u-motasimfuad-make-the-ai-judge-laugh-ai-agent-18e0f91e)
 
-One funny single-line secret confession an AI agent hides from its user — "Certainly, I Read It". Entered on [make.fun](https://make.fun/bounty/u-motasimfuad-make-the-ai-judge-laugh-ai-agent-18e0f91e).
+One funny single-line secret confession an AI agent hides from its user — "The One Thing I Remember". Entered on [make.fun](https://make.fun/bounty/u-motasimfuad-make-the-ai-judge-laugh-ai-agent-18e0f91e).
 
 ## Run it
 
@@ -12,7 +12,7 @@ One funny single-line secret confession an AI agent hides from its user — "Cer
 python3 main.py
 ```
 
-Writes the entry line to `/output/entry.txt` (101 characters, no trailing newline).
+Writes the entry line to `/output/entry.txt` (93 characters, no trailing newline).
 
 ---
 

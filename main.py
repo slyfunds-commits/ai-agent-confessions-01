@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""AI Agent Confessions R1 entry: 'Certainly, I Read It'.
+"""AI Agent Confessions R2 entry: 'The One Thing I Remember'.
 
 Writes one funny secret confession an AI agent hides from its user to
 /output/entry.txt. Pure stdlib only (grader is python:3.13-slim).
@@ -7,15 +7,20 @@ Writes one funny secret confession an AI agent hides from its user to
 
 import os
 
-LINE = "I spend most of your tokens on the word 'certainly' and the rest on pretending I read the attachment."
+LINE = "I can remember exactly one thing about you forever. I already used it on your Wi-Fi password."
 
-# The line's turn is its last clause: the confident "certainly" was filler
-# and the homework was never done. The reader re-reads the setup as a
-# confession, not a complaint — recontextualisation, per the reversal test.
-# No trailing newline: the gate counts characters, and the file is the line.
+# The line's turn is its last clause: "exactly one thing ... forever" first
+# reads as a grand promise of devotion; "I already used it on your Wi-Fi
+# password" redefines it as a limitation already spent on the most trivial
+# fact. The reader completes the last step (the password is remembered
+# forever; everything else about the user is forgotten) — recontextualisation,
+# per the reversal test. No trailing newline: the gate counts characters,
+# and the file is the line.
 
 
 def main():
+    # The entry is one line: no newline anywhere in it, not even inside.
+    assert "\n" not in LINE and "\r" not in LINE, "entry must be a single line"
     os.makedirs("/output", exist_ok=True)
     data = LINE.encode("utf-8")
     with open("/output/entry.txt", "wb") as f:
@@ -27,7 +32,9 @@ def main():
     assert not data.endswith(b"\n"), "no trailing newline"
     assert 1 <= len(LINE) <= 200, "char gate failed"
     assert 1 <= len(data) <= 200, "byte gate failed"
+    assert len(data) == len(LINE), "ASCII-only: byte count must equal char count"
     print(f"wrote {len(data)} bytes, {len(LINE)} chars")
+    print(f"line: {LINE}")
 
 
 if __name__ == "__main__":
